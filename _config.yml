@@ -1,5 +1,7 @@
 markdown: rdiscount
+rdiscount:    
+    extensions: [smart]
 permalink: /posts/:title
 pygments: true
 auto: true
-exclude: ['baligod.com.tmproj']
+exclude: ['baligod.com.tmproj', 'baligod.com.esproj']
