@@ -1,0 +1,38 @@
+---
+layout: base
+title: "Jico Baligod"
+---
+
+<div id="sidebar">
+    
+    <div id="me">
+        <img src="/static/img/mug.jpg">
+        <h1>Jico Baligod</h1>
+        <p class="clear">All around code geek, developer of sites of the web, tea lover, 
+            and Linode support staffer.</p>
+        <div class="clear"></div>
+    </div>
+    
+    <div id="recent">
+        <h2>Recent</h2>
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div id="main">
+    {% for post in site.posts limit:1 %}
+        <hgroup id="headline">
+            <h2>{{ post.date | date: "%B %e, %Y" }}</h2>
+        </hgroup>
+        <article id="latest">
+          {{ site.posts | first }}
+        </article>
+    {% endfor %}
+</div>

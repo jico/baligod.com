@@ -1,0 +1,8 @@
+---
+layout: post
+title: This is a third blog post!
+---
+
+# Title goes here
+
+Lorem ipsum dolor blah blah

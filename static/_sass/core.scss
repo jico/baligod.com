@@ -1,0 +1,106 @@
+/**
+ *  SCSS variables
+ */
+$wrapper_max: 1140px;
+$main_width: 100% / 1.618;
+$sidebar_width: 100% - $main_width;
+
+@import "reset";
+@import "seafarer";
+
+/**
+ *  Start core styling
+ */
+body {
+	font-size: 1em;
+	padding: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.highlight {
+    background-color: #333;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: $wrapper_max;
+    margin: 0 auto;
+}
+
+#main {
+    float: left;
+    position: relative;
+    width: $main_width;
+    margin: 0;
+    
+    > * {
+        margin: 20px;
+    }
+    
+    #headline {
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        
+        h1, h2 {
+            margin-top: 0;
+        }
+    }
+    
+    #latest {
+        h2:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+#sidebar {
+    float: right;
+    position: relative;
+    width: $sidebar_width;
+    margin: 0;
+    background-color: #ededed;
+    
+    #me {
+        h1 {
+            font-size: 1.2em;
+        }
+        img {
+            width: 75px;
+            float: left;
+            margin: 0 10px 10px 10px;
+        }
+    }
+    
+    #recent {
+        font-size: 0.8em;
+        
+        ul {
+            li {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        
+        .post-date {
+            float: right;
+            font-size: 0.8em;
+        }
+    }
+    
+    div, article {
+        display: block;
+        clear: both;
+        margin: 20px;
+    }
+}
+
+.clear {
+    height: 0;
+    clear: both;
+}

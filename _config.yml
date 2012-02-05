@@ -1,0 +1,5 @@
+markdown: rdiscount
+permalink: /posts/:title
+pygments: true
+auto: true
+exclude: ['baligod.com.tmproj']

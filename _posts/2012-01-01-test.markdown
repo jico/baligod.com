@@ -1,0 +1,8 @@
+---
+layout: post
+title: This is a blog post!
+---
+
+# This is the title
+
+This is some awesome content!
