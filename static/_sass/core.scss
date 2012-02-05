@@ -12,23 +12,22 @@ $sidebar_width: 100% - $main_width;
  *  Start core styling
  */
 body {
+    background-color: #fefefe;
 	font-size: 1em;
-	padding: 8px;
+	padding: 16px;
+	border-top: 2px solid #333;
+	background-image: url('/static/img/light_alu.png');
 }
 
 a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-}
-
 .highlight {
     background-color: #333;
 }
 
-#wrapper {
+#container {
     width: 100%;
     max-width: $wrapper_max;
     margin: 0 auto;
@@ -39,24 +38,45 @@ ul {
     position: relative;
     width: $main_width;
     margin: 0;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
     
     > * {
         margin: 20px;
     }
     
     #headline {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 3px solid #ccc;
         text-align: center;
+        height: 110px;
         
         h1, h2 {
             margin-top: 0;
         }
+        
+        h2 {
+            font-size: 1.2em;
+        }
     }
     
     #latest {
+        margin-top: 40px;
+        
         h2:first-child {
             margin-top: 0;
         }
+    }
+    
+    img.latest-ribbon {
+        position: absolute;
+        display: block;
+        width: 240px;
+        left: 50%;
+        margin-left: -120px;
+        margin-top: -50px;
     }
 }
 
@@ -65,42 +85,78 @@ ul {
     position: relative;
     width: $sidebar_width;
     margin: 0;
-    background-color: #ededed;
+    
+    .wrapper {
+        background: #fefefe;
+        margin: 0 20px;
+        padding: 10px 0;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+        
+        > div, > article {
+            display: block;
+            clear: both;
+            margin: 10px 20px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #ccc;
+        }
+    }
+    
+    h1, h2, h3 {
+        margin: 10px 0 0;
+    }
     
     #me {
+        height: 110px;
+        overflow: hidden;
+        
         h1 {
-            font-size: 1.2em;
+            font-size: 2em;
+            margin: 0;
         }
+        
+        p {
+            margin: 0;
+        }
+        
         img {
-            width: 75px;
+            width: 50px;
+            margin: 0 20px 5px 0;
             float: left;
-            margin: 0 10px 10px 10px;
         }
+        
     }
     
-    #recent {
-        font-size: 0.8em;
-        
+    #recent {   
+        h2 {
+            display: block;
+        }   
+          
         ul {
+            list-style-type: none;
+            margin: 8px 0;
+            font-size: 0.85em;
+            width: 100%;
+            
             li {
-                border-bottom: 1px solid #ccc;
+                clear: right;
+                margin: 0;
+                border-top: 1px solid #ccc;
+                width: 100%;
+                
+                .post-date {
+                    float: right;
+                    text-align: right;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
             }
         }
-        
-        .post-date {
-            float: right;
-            font-size: 0.8em;
-        }
-    }
-    
-    div, article {
-        display: block;
-        clear: both;
-        margin: 20px;
     }
 }
 
 .clear {
-    height: 0;
     clear: both;
 }
