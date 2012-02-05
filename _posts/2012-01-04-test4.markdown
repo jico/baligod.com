@@ -1,6 +1,6 @@
 ---
 layout: post
-title: This is yet another one
+title: Making things make things
 ---
 
 Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.
