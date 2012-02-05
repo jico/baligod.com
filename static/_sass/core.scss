@@ -1,9 +1,23 @@
 /**
  *  SCSS variables
  */
-$wrapper_max: 1140px;
-$main_width: 100% / 1.618;
-$sidebar_width: 100% - $main_width;
+$container_width: 1140px;
+$num_cols: 16;
+$gutter: 20px;
+
+/* Size of each grid column */
+$grid_width: (1140 - ($num_cols - 1)*$gutter) / $num_cols;
+
+$main_num_cols: round($num_cols / 1.618);
+$sidebar_num_cols: $num_cols - $main_num_cols;
+
+/* Content section dimensions in pixels */
+$main_width_px: $main_num_cols * $grid_width + $gutter * ($main_num_cols - 1);
+$sidebar_width_px: $sidebar_num_cols * $grid_width + $gutter * ($sidebar_num_cols - 1);
+
+/* Content section dimensions in percentages */
+$main_width: $main_width_px / $container_width * 100%;
+$sidebar_width: $sidebar_width_px / $container_width * 100%;
 
 @import "reset";
 @import "seafarer";
@@ -29,7 +43,7 @@ a {
 
 #container {
     width: 100%;
-    max-width: $wrapper_max;
+    max-width: $container_width;
     margin: 0 auto;
 }
 
@@ -45,7 +59,7 @@ a {
     box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
     
     > * {
-        margin: 20px;
+        margin: $gutter $gutter*1.5;
     }
     
     #headline {
@@ -76,7 +90,7 @@ a {
         width: 240px;
         left: 50%;
         margin-left: -120px;
-        margin-top: -50px;
+        margin-top: -30px;
     }
 }
 
@@ -98,7 +112,7 @@ a {
         > div, > article {
             display: block;
             clear: both;
-            margin: 10px 20px;
+            margin: 10px $gutter*1.5;
             margin-bottom: 10px;
             border-bottom: 3px solid #ccc;
         }

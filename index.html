@@ -31,14 +31,16 @@ title: "Jico Baligod"
 </div>
 
 <div id="main">
-    {% for post in site.posts limit:1 %}
-        <hgroup id="headline">
-            <h1>{{ post.title }}</h1>
-            <h2>{{ post.date | date: "%B %e, %Y" }}</h2>
-        </hgroup>
-        <img src="/static/img/latest-ribbon.jpg" class="latest-ribbon">
-        <article id="latest">
-          {{ post.content }}
-        </article>
-    {% endfor %}
+    <div class="wrapper">
+        {% for post in site.posts limit:1 %}
+            <hgroup id="headline">
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.date | date: "%B %e, %Y" }}</h2>
+            </hgroup>
+            <img src="/static/img/latest-ribbon.jpg" class="latest-ribbon">
+            <article id="latest">
+              {{ post.content }}
+            </article>
+        {% endfor %}
+    </div>
 </div>
