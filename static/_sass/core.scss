@@ -48,7 +48,7 @@ a {
 }
 
 #main {
-    float: left;
+    float: right;
     position: relative;
     width: $main_width;
     margin: 0;
@@ -95,10 +95,14 @@ a {
 }
 
 #sidebar {
-    float: right;
+    float: left;
     position: relative;
     width: $sidebar_width;
     margin: 0;
+    
+    ul {
+        list-style-type: none;
+    }
     
     .wrapper {
         //background: #fefefe;
@@ -132,6 +136,7 @@ a {
                 height: 1.8em;
                 margin: 0.4em 0.2em;
                 float: right;
+                @include border-radius(2px);
             }
         }
         
@@ -152,7 +157,6 @@ a {
         border-bottom: 1px solid #ccc;
         
         ul {
-            list-style-type: none;
             padding: 0;
             margin: 0;
             height: 1em;
@@ -170,13 +174,13 @@ a {
     #recent {   
         h2 {
             display: block;
-        }   
+        }
           
         ul {
-            list-style-type: none;
             margin: 8px 0;
             font-size: 1em;
             width: 100%;
+            border-bottom: 1px solid #ccc;
             
             li {
                 position: relative;
@@ -184,6 +188,11 @@ a {
                 margin: 0.5em 0;
                 width: 100%;
                 height: 2.2em;
+                
+                &.archive-link {
+                    text-align: right;
+                    margin-top: 1em;
+                }
                 
                 .post-title {
                     position: absolute;
@@ -234,6 +243,16 @@ a {
                         width: 100%;
                     }
                 }
+            }
+        }
+    }
+    
+    .social {
+        ul {
+            margin: 0 $gutter;
+            
+            li {
+                display: inline;
             }
         }
     }
