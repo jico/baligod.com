@@ -112,7 +112,6 @@ a {
             clear: both;
             margin: 10px $gutter;
             margin-bottom: 10px;
-            border-bottom: 2px solid #ccc;
         }
     }
     
@@ -181,7 +180,7 @@ a {
             li {
                 clear: right;
                 margin: 0;
-                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
                 width: 100%;
                 
                 .post-date {
