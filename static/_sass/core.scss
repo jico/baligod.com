@@ -23,6 +23,8 @@ $sidebar_width: $sidebar_width_px / $container_width * 100%;
 @import "reset";
 @import "seafarer";
 
+$link_color: hsl(196,83,30);
+
 /**
  *  Start core styling
  */
@@ -35,6 +37,13 @@ body {
 
 a {
     text-decoration: none;
+    color: $link_color;
+    @include border-radius(2px);
+}
+
+a:hover {
+    color: white;
+    background-color: $link_color;
 }
 
 .highlight {
@@ -52,11 +61,7 @@ a {
     position: relative;
     width: $main_width;
     margin: 0;
-    //background: #fff;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    //box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+    @include border-radius(4px);
     
     > * {
         margin: $gutter;
@@ -179,7 +184,7 @@ a {
             li {
                 position: relative;
                 clear: right;
-                margin: 0.5em 0;
+                margin: 0;
                 width: 100%;
                 height: 2.2em;
                 
@@ -191,53 +196,11 @@ a {
                 .post-title {
                     position: absolute;
                     left: $gutter;
-                    line-height: 2.2em;
-                    width: 70%;
-                    margin-right: 30%;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 
-                .cal {
-                    float: right;
-                    display: block;
-                    position: relative;
-                    height: 100%;
-                    width: 10%;
-                    text-align: center;
-                    background: #333;
-                    color: #fff;
-                    @include border-radius(2px);
-                    
-                    .span {
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                    }
-                    
-                    .month {
-                        font-size: 0.3em;
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                    }
-                    
-                    .day {
-                        font-size: 1em;
-                        position: absolute;
-                        top: 0.4em;
-                        width: 100%;
-                    }
-                    
-                    .year {
-                        font-size: 0.3em;
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                    }
-                }
             }
         }
     }
@@ -248,6 +211,10 @@ a {
             
             li {
                 display: inline;
+                
+                a:hover {
+                    background: none;
+                }
             }
         }
     }
@@ -264,29 +231,15 @@ a {
     }
 }
 
-@media screen and (max-width: 960px) {
-    #sidebar #recent {
-        ul {
-            li {
-                height: 1em;
-                padding: 0.2em 0;
-                
-                .post-title {
-                    font-size: 1em;
-                    line-height: 1em;
-                    width: 90%;                    
-                }
-            }
-        }
-        
-        .post-date {
-            display: none;
-        }
+@media screen and (max-width: 768px) {
+    body {
+        background: orange;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     body {
         background: red;
     }
 }
+
