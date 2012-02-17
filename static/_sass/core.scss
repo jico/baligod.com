@@ -140,6 +140,15 @@ a:hover {
                 margin: 0.4em auto;
                 @include border-radius(2px);
             }
+            
+            a {
+                color: inherit;
+            }
+            
+            a:hover {
+                color: $link_color;
+                background: none;
+            }
         }
         
         h1 {
