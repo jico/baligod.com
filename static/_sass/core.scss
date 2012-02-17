@@ -205,6 +205,11 @@ a:hover {
                     text-overflow: ellipsis;
                 }
                 
+                a.active {
+                    color: white;
+                    background-color: $link_color;
+                }
+                
             }
         }
     }
