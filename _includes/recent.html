@@ -3,9 +3,7 @@
     <ul>
         {% for post in site.posts limit:5 %}
             <li {% if forloop.first %} style="display:none" {% endif %}>
-                <span class="post-title">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </span>
+                <a href="{{ post.url }}">{{ post.title }}</a>
             </li>
         {% endfor %}
         <li class="archive-link"><a href="/archives">Archives &rarr;</a></li>

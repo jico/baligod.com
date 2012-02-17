@@ -67,7 +67,7 @@ a:hover {
         margin: $gutter;
     }
     
-    #headline {
+    #headline, .post-title {
         border-bottom: 3px solid #ccc;
         text-align: center;
         
@@ -79,6 +79,10 @@ a:hover {
             font-size: 1.2em;
             padding-bottom: 2em;
         }
+    }
+    
+    .post-title h2 {
+        padding-bottom: 0;
     }
     
     #latest {
@@ -110,7 +114,7 @@ a:hover {
     }
     
     .wrapper {
-        margin: 0 $gutter;
+        margin: 0;
         padding: 10px 0;
         
         > div, > article {
@@ -122,7 +126,7 @@ a:hover {
     }
     
     h1, h2, h3 {
-        margin: 10px $gutter 0;
+        margin: 10px 0;
     }
     
     #me {        
