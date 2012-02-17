@@ -31,7 +31,9 @@ title: "Jico Baligod"
                 <h1>{{ post.title }}</h1>
                 <h2>{{ post.date | date: "%B %e, %Y" }}</h2>
             </hgroup>
-            <img src="/static/img/latest-ribbon.jpg" class="latest-ribbon">
+            <div>
+                <img src="/static/img/latest-ribbon.jpg" class="latest-ribbon">
+            </div>
             <article id="latest">
               {{ post.content }}
             </article>
