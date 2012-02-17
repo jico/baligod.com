@@ -1,9 +1,11 @@
 <div class="sidebar">
     <div class="wrapper">
         <div id="recent">
+            <a class="archives-link" href="/archives">Archives &rarr;</a>
             <h3>Recent</h3>
+            <div class="clear"></div>
             <ul>
-                {% for post in site.posts limit:5 %}
+                {% for post in site.posts limit:10 %}
                     <li 
                     {% if forloop.first and page.url == '/index.html' %}    
                         style="display:none" 
@@ -15,7 +17,7 @@
                         >{{ post.title }}</a>
                     </li>
                 {% endfor %}
-                <li class="archive-link"><a href="/archives">Archives &rarr;</a></li>
+                
             </ul>
         </div>
     </div>
