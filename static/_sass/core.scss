@@ -105,12 +105,8 @@ a {
     }
     
     .wrapper {
-        //background: #fefefe;
-        margin: 0 20px;
+        margin: 0 $gutter;
         padding: 10px 0;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
         
         > div, > article {
             display: block;
@@ -124,18 +120,15 @@ a {
         margin: 10px $gutter 0;
     }
     
-    #me {
-        height: 110px;
-        overflow: hidden;
-        
+    #me {        
         .mast {
-            width: 75%;
             margin: 0 auto;
+            text-align: center;
             
             img {
-                height: 1.8em;
-                margin: 0.4em 0.2em;
-                float: right;
+                display: block;
+                height: 75px;
+                margin: 0.4em auto;
                 @include border-radius(2px);
             }
         }
@@ -157,7 +150,8 @@ a {
         border-bottom: 1px solid #ccc;
         
         ul {
-            padding: 0;
+            display: block;
+            padding: 0.2em;
             margin: 0;
             height: 1em;
             width: 100%;
@@ -199,6 +193,7 @@ a {
                     left: $gutter;
                     line-height: 2.2em;
                     width: 70%;
+                    margin-right: 30%;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -260,4 +255,38 @@ a {
 
 .clear {
     clear: both;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #headline {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #sidebar #recent {
+        ul {
+            li {
+                height: 1em;
+                padding: 0.2em 0;
+                
+                .post-title {
+                    font-size: 1em;
+                    line-height: 1em;
+                    width: 90%;                    
+                }
+            }
+        }
+        
+        .post-date {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: red;
+    }
 }
