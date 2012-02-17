@@ -57,7 +57,7 @@ a:hover {
 }
 
 #main {
-    float: right;
+    float: left;
     position: relative;
     width: $main_width;
     margin: 0;
@@ -104,7 +104,7 @@ a:hover {
 }
 
 #sidebar {
-    float: left;
+    float: right;
     position: relative;
     width: $sidebar_width;
     margin: 0;
@@ -189,8 +189,7 @@ a:hover {
                 position: relative;
                 clear: right;
                 margin: 0;
-                width: 100%;
-                height: 2.2em;
+                width: 100%;                
                 
                 &.archive-link {
                     text-align: right;
