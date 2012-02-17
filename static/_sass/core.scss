@@ -196,6 +196,7 @@ a:hover {
           
         ul {
             margin: 8px 0;
+            padding-bottom: 0.5em;
             font-size: 1em;
             width: 100%;
             border-bottom: 1px solid #ccc;
@@ -305,7 +306,7 @@ a:hover {
                 
                 a:hover {
                     background: none;
-                    color: $link_color;
+                    text-decoration: underline;
                 }
             }
         }
@@ -324,7 +325,7 @@ a:hover {
         
         .post-title {
             h1 {
-                font-size: 0.2em;
+                font-size: 1.8em;
             }
         }
     }
