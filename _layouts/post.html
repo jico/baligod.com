@@ -9,7 +9,12 @@ layout: base
             <h2>{{ page.date | date: "%B %e, %Y" }}</h2>
         </header>
         <article id="latest">
-          {{ content }}
+            {% if page.category == "projects" %}
+            <div class="feature">
+                <img src="/static/img/{{ page.feature }}" />
+            </div>
+            {% endif %}
+            {{ content }}
         </article>
     </div>
 </div>
