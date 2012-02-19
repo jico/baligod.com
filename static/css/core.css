@@ -555,10 +555,10 @@ img {
         font-weight: bold;
         text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.3); }
         #topbar #nav li a {
-          color: #fff; }
-        #topbar #nav li a:hover {
-          background: none;
-          text-decoration: underline; }
+          color: #fff;
+          padding: 0 0.333em; }
+        #topbar #nav li a:hover, #topbar #nav li a.active {
+          background: #565656; }
 
   .sidebar {
     float: none;

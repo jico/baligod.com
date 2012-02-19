@@ -384,11 +384,11 @@ img {
                 
                 a {
                     color: #fff;
+                    padding: 0 0.333em;
                 }
                 
-                a:hover {
-                    background: none;
-                    text-decoration: underline;
+                a:hover, a.active {
+                    background: #565656;
                 }
             }
         }
