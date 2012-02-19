@@ -8,7 +8,9 @@
   <!-- Load Typekit -->
   <script type="text/javascript" src="http://use.typekit.com/mrv3mna.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  {% if page.jquery %}
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  {% endif %}
   {% for script in page.js %}
   <script src="{{ script }}"></script>
   {% endfor %}
