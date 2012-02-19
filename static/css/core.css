@@ -318,6 +318,10 @@ a {
   -moz-border-radius: 2px;
   border-radius: 2px; }
 
+a.active {
+  color: white;
+  background-color: #0d6a8c; }
+
 img {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -439,9 +443,6 @@ img {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-      .sidebar #recent ul li a.active {
-        color: white;
-        background-color: #0d6a8c; }
   .sidebar .social ul {
     margin: 0; }
     .sidebar .social ul li {
@@ -563,10 +564,12 @@ img {
     float: none;
     width: 100%; } }
 @media screen and (max-width: 480px) {
-  #main.latest {
-    display: none; }
-  #main .post-title h1 {
-    font-size: 1.8em; }
+  #main {
+    font-size: 0.8em; }
+    #main.latest {
+      display: none; }
+    #main .post-title h1 {
+      font-size: 1.8em; }
 
   #main.post {
     display: block; }

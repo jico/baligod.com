@@ -43,6 +43,11 @@ a {
     @include border-radius(2px);
 }
 
+a.active {
+    color: white;
+    background-color: $link_color;
+}
+
 img {
     @include border-radius(4px);
 }
@@ -224,12 +229,6 @@ img {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                
-                a.active {
-                    color: white;
-                    background-color: $link_color;
-                }
-                
             }
         }
     }
@@ -404,6 +403,7 @@ img {
 @media screen and (max-width: 480px) {
     
     #main {
+        font-size: 0.8em;
         &.latest {
             display: none;
         }
