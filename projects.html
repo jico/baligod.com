@@ -1,0 +1,16 @@
+---
+layout: base
+title: "Projects by Jico"
+---
+
+<div id="main">
+    <div class="wrapper">
+        <h1 class="section-title">Projects</h1>
+        {% for post in site.categories.projects %}
+            <div class="project">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <p class="summary">{{ post.summary }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>

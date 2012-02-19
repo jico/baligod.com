@@ -1,0 +1,36 @@
+---
+layout: base
+jquery: true
+js:
+- /static/js/fancybox-2.0.4/source/jquery.fancybox.pack.js?v=2.0.4
+---
+
+<div id="main" class="post project-post">
+    <div class="wrapper">
+        <header class="post-title">
+            <hgroup>
+                <h1>{{ page.title }}</h1>
+                <h2><a href="http://{{ page.project-url }}">{{ page.project-url }}</a></h2>
+            </hgroup>
+            <h2>{{ page.date | date: "%B %e, %Y" }}</h2>
+        </header>
+        <article>
+            <div class="features">
+            {% if page.features.size > 1 %}
+                {% for feature in page.features %}
+                    <a class="fancybox" rel="project" href="/static/img/features/{{ feature }}" {% unless forloop.first %}style="display:none"{% endunless %}><img src="/static/img/features/{{ feature }}" /></a>
+                {% endfor %}
+            {% else %}
+                <img src="/static/img/features/{{ page.features.first }}" />
+            {% endif %}
+            </div>
+            {{ content }}
+        </article>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
