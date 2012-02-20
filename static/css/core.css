@@ -473,6 +473,9 @@ img {
     max-width: 100%;
     max-height: 66.6666%; }
 
+ul#archives .post-date {
+  float: right; }
+
 #footer {
   font-size: 0.8em;
   width: 100%;
