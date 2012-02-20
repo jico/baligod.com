@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="wrapper">
         <div id="recent">
-            <a class="archives-link" href="/archives">Archives &rarr;</a>
+            <a class="archives-link{% if page.title contains 'Archives' %} active {% endif %}" href="/archives">Archives &rarr;</a>
             <h3>Recent</h3>
             <div class="clear"></div>
             <ul>
