@@ -49,6 +49,18 @@ namespace :new do
   end
 end
 
+namespace :dev do
+  desc "Startup Jekyll"
+  task :jekyll do
+    sh "jekyll --server"
+  end
+  
+  desc "Startup SASS"
+  task :sass do
+    sh "sass --style compressed -l --watch static/_sass/:static/css"
+  end
+end
+
 desc "Publish any finished drafts"
 task :publish do
   Dir.foreach("drafts/") do |filename|
