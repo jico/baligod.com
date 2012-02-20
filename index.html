@@ -26,6 +26,11 @@ title: "Jico Baligod"
                     <img src="/static/img/features/{{ post.features.first }}" />
                 {% endif %}
               </div>
+              <script type="text/javascript">
+                  $(document).ready(function() {
+                      $('.fancybox').fancybox();
+                  });
+              </script>
               {% endif %}
               {% if post.project-url %}
               <h2 class="project-url"><a href="http://{{ post.project-url }}">{{ post.project-url }}</a></h2>
