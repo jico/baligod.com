@@ -5,6 +5,11 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="initial-scale=1.0,width=device-width" />
   <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/static/css/pygments-monokai.css" type="text/css" />
+  <link rel="stylesheet" href="/static/css/core.css" type="text/css" />
+  {% for stylesheet in page.css %}
+  <link rel="stylesheet" href="{{ stylesheet }}" type="text/css" />
+  {% endfor %}
   <!-- Load Typekit -->
   <script type="text/javascript" src="http://use.typekit.com/mrv3mna.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -14,8 +19,6 @@
   {% for script in page.js %}
   <script src="{{ script }}"></script>
   {% endfor %}
-  <link rel="stylesheet" href="/static/css/pygments-monokai.css" type="text/css">
-  <link rel="stylesheet" href="/static/css/core.css" type="text/css">
 </head>
 <body>
   
