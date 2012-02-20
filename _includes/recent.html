@@ -6,7 +6,7 @@
             <div class="clear"></div>
             <ul>
                 {% for post in site.posts limit:10 %}
-                    <li {% if forloop.first and page.url == '/index.html' %} style="display:none" {% endif %}>
+                    <li {% if forloop.first and page.url == '/index.html' %} class="latest" {% endif %}>
                         <a href="{{ post.url }}" {% if page.url == post.url %} class="active" {% endif %}>{{ post.title }}</a>
                     </li>
                 {% endfor %}

@@ -102,7 +102,7 @@ img {
     }
     
     #latest {
-        margin-top: 40px;
+        margin-top: 20px;
         
         h2:first-child {
             margin-top: 0;
@@ -228,6 +228,10 @@ img {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
+                &.latest {
+                    display: none;
+                }
             }
         }
     }
@@ -418,6 +422,10 @@ ul#archives {
                 font-size: 1.8em;
             }
         }
+    }
+    
+    .sidebar #recent ul li.latest {
+        display: block;
     }
     
     #main.post {
