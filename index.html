@@ -6,10 +6,12 @@ title: "Jico Baligod"
 <div id="main" class="latest">
     <div class="wrapper">
         {% for post in site.posts limit:1 %}
-            <hgroup id="headline">
+            <div id="headline">
+              <hgroup>
                 <h1>{{ post.title }}</h1>
                 <h2>{{ post.date | date: "%B %e, %Y" }}</h2>
-            </hgroup>
+              </hgroup>
+            </div>
             <div>
                 <img src="/static/img/latest-ribbon.jpg" class="latest-ribbon">
             </div>
@@ -24,6 +26,9 @@ title: "Jico Baligod"
                     <img src="/static/img/features/{{ post.features.first }}" />
                 {% endif %}
               </div>
+              {% endif %}
+              {% if post.project-url %}
+              <h2 class="project-url"><a href="http://{{ post.project-url }}">{{ post.project-url }}</a></h2>
               {% endif %}
               {{ post.content }}
             </article>
