@@ -6,18 +6,10 @@
             <div class="clear"></div>
             <ul>
                 {% for post in site.posts limit:10 %}
-                    <li 
-                    {% if forloop.first and page.url == '/index.html' %}    
-                        style="display:none" 
-                    {% endif %}>
-                        <a href="{{ post.url }}"
-                        {% if page.url == post.url %}
-                            class="active"
-                        {% endif %}
-                        >{{ post.title }}</a>
+                    <li {% if forloop.first and page.url == '/index.html' %} style="display:none" {% endif %}>
+                        <a href="{{ post.url }}" {% if page.url == post.url %} class="active" {% endif %}>{{ post.title }}</a>
                     </li>
                 {% endfor %}
-                
             </ul>
         </div>
     </div>
