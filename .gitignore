@@ -3,3 +3,4 @@ _site/
 *.esproj
 *.tmproj
 drafts/
+*.sh
