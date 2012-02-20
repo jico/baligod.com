@@ -64,7 +64,6 @@ end
 desc "Publish any finished drafts"
 task :publish do
   Dir.foreach("drafts/") do |filename|
-    publish = false
     next if File.directory?(filename)
     unless File.readlines("drafts/#{filename}").grep(/published: true/).empty?
       puts "Publishing #{filename}"
