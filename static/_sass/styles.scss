@@ -55,6 +55,16 @@ img {
     background-color: #333;
 }
 
+code {
+    height: 1em;
+	white-space: nowrap;
+    padding: 0.05em 0.4em;
+	background-color: #efebe8;
+	border: 1px solid #ddd;
+	font: 0.9em "Courier New", Courier, mono;
+	@include border-radius(4px);
+}
+
 .container {
     width: 97%;
     max-width: $container_width;
@@ -105,7 +115,7 @@ img {
         margin-top: 20px;
         
         h2:first-child {
-            margin-top: 0;
+            margin-top: 1em;
         }
         
         h2.project-url {
