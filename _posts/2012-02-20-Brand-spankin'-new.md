@@ -27,6 +27,6 @@ I started developing the new site on Tumblr for some time, then stumbled across 
 
 The last point has turned out to be the coolest. Working at Linode for the past few months, I've grown to love the command line. A _lot_. It's oddly exhilarating to be able to draft a new page with a `rake new:post` and publish it with a simple `rake publish && rsync`.
 
-I'm looking forward to writing more and building out this site's content (as it's pretty empty right now). As for it's design, I think it's here to stay, at least for a little while. I can't promise I won't be making a few tweaks here and there.
+I'm looking forward to writing more and building out this site's content (as it's pretty empty right now). As for the design, I think it's here to stay, at least for a little while. I can't promise I won't be making a few tweaks here and there.
 
-P.S. You can view the source on [GitHub](http://github.com/jico/baligod.com)! Feel free to do what you want with it. I'd appreciate if you didn't copy it _exactly_.
+P.S. You can view the source on [GitHub](http://github.com/jico/baligod.com)! Feel free to do what you want with it. I'd appreciate if you didn't copy it _exactly_ though.
