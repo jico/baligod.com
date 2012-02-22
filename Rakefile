@@ -9,8 +9,8 @@ namespace :new do
     puts "What should we call this post for now?"
     name = STDIN.gets.chomp
     
-    filename = dstr + name.gsub(/ /, '-')
-    FileUtils.touch("drafts/#{filename}.md")
+    filename = dstr + name.gsub(/ /, '-').gsub(/[^\w+\-]/, '')
+    FileUtils.touch("drafts/#{filename.downcase}.md")
 
     open("drafts/#{filename}.md", 'a') do |f|
       f.puts "---"
@@ -32,8 +32,8 @@ namespace :new do
     puts "What's the project url?"
     projectUrl = STDIN.gets.chomp
     
-    filename = dstr + name.gsub(/ /, '-')
-    FileUtils.touch("drafts/#{filename}.md")
+    filename = dstr + name.gsub(/ /, '-').gsub(/[^\w+\-]/, '')
+    FileUtils.touch("drafts/#{filename.downcase}.md")
 
     open("drafts/#{filename}.md", 'a') do |f|
       f.puts "---"
@@ -63,11 +63,14 @@ end
 
 desc "Publish any finished drafts"
 task :publish do
-  Dir.foreach("drafts/") do |filename|
-    next if File.directory?(filename)
-    unless File.readlines("drafts/#{filename}").grep(/published: true/).empty?
-      puts "Publishing #{filename}"
-      FileUtils.mv("drafts/#{filename}", "_posts/#{filename}")
+  Dir.foreach("drafts/") do |file|
+    next if File.directory?(file)
+    unless File.readlines("drafts/#{file}").grep(/published: true/).empty?
+      d = DateTime.now
+      dstr = "%d-%02d-%02d-" % [d.year, d.month, d.day]
+      newFile = dstr + file[11, file.length]
+      FileUtils.mv("drafts/#{file}", "_posts/#{newFile}")
+      puts "Published \"#{newFile}\""
     end
   end
 end
