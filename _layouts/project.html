@@ -12,6 +12,7 @@ layout: base
             <h2>{{ page.date | date: "%B %e, %Y" }}</h2>
         </header>
         <article>
+          {% if page.features %}
             <div class="features">
             {% if page.features.size > 1 %}
                 {% for feature in page.features %}
@@ -21,7 +22,8 @@ layout: base
                 <img src="/static/img/features/{{ page.features.first }}" />
             {% endif %}
             </div>
-            {{ content }}
+          {% endif %}
+          {{ content }}
         </article>
     </div>
 </div>

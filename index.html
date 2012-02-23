@@ -17,20 +17,20 @@ title: "Jico Baligod"
             </div>
             <article id="latest">
               {% if post.features %}
-              <div class="features">
-                {% if post.features.size > 1 %}
-                    {% for feature in post.features %}
-                        <a class="fancybox" rel="project" href="/static/img/features/{{ feature }}" {% unless forloop.first %}style="display:none"{% endunless %}><img src="/static/img/features/{{ feature }}" /></a>
-                    {% endfor %}
-                {% else %}
-                    <img src="/static/img/features/{{ post.features.first }}" />
-                {% endif %}
-              </div>
-              <script type="text/javascript">
-                  $(document).ready(function() {
-                      $('.fancybox').fancybox();
-                  });
-              </script>
+                <div class="features">
+                  {% if post.features.size > 1 %}
+                      {% for feature in post.features %}
+                          <a class="fancybox" rel="project" href="/static/img/features/{{ feature }}" {% unless forloop.first %}style="display:none"{% endunless %}><img src="/static/img/features/{{ feature }}" /></a>
+                      {% endfor %}
+                  {% else %}
+                      <img src="/static/img/features/{{ post.features.first }}" />
+                  {% endif %}
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.fancybox').fancybox();
+                    });
+                </script>
               {% endif %}
               {% if post.project-url %}
               <h2 class="project-url"><a href="http://{{ post.project-url }}">{{ post.project-url }}</a></h2>
