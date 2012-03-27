@@ -29,7 +29,7 @@ $link_color: hsl(196,83,30);
  *  Start core styling
  */
 body {
-    background-color: #fff;
+  background-color: #fff;
 	font-size: 1em;
 	padding: 16px 0 0;
 	border-top: 2px solid #333;
@@ -49,20 +49,6 @@ a.active {
 
 img {
     @include border-radius(4px);
-}
-
-.highlight {
-    background-color: #333;
-}
-
-code {
-    height: 1em;
-	white-space: nowrap;
-    padding: 0.05em 0.4em;
-	background-color: #efebe8;
-	border: 1px solid #ddd;
-	font: 0.9em "Courier New", Courier, mono;
-	@include border-radius(4px);
 }
 
 .container {
@@ -132,6 +118,23 @@ code {
         margin-left: -120px;
         margin-top: -30px;
     }
+    
+    .highlight {
+        background-color: #232323;
+        @include border-radius(4px);   
+    }
+        
+    p code {
+      height: 1em;
+    	white-space: nowrap;
+      padding: 0.05em 0.4em;
+    	background-color: #efebe8;
+    	border: 1px solid #ddd;
+    	font: 0.9em "Courier New", Courier, mono;
+    	@include border-radius(4px);
+    }
+
+    
 }
 
 .sidebar {
