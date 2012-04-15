@@ -1,16 +1,17 @@
 ---
 layout: project
-title: "Katie Boyd Photography"
+title: "Katie Boyd Photography (v1)"
 category: projects
 summary: "A conceptual photographer's portfolio."
 project-url: www.katieboydphotography.com
+permalink: /posts/katie-boyd-photography-v1
 features:
 - kbp-home.jpg
 - kbp-about.jpg
 - kbp-gallery.jpg
 ---
 
-Katie Boyd is a Fine Arts student and photographer based in South Jersey. She primarily shoots conceptual images, but is keen on snapping portraits and even her self-made paper sculptures from time to time. Aside from her
+Katie Boyd is a Fine Arts student and photographer based in South Jersey. She primarily shoots conceptual images, but is keen on snapping portraits and even her self-made paper sculptures from time to time.
 
 ## First!
 
