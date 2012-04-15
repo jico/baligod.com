@@ -39,6 +39,7 @@ The site uses some new CSS3 features to achieve a pretty sweet interactive exper
 * Chrome
 * Firefox 10.0+
 * Safari 5.0+
+* iOS Safari and Android browser 3.0+ (Supported, but not tested on touch devices yet)
 
 Unsupported browsers get redirected to [the old version](/posts/katie-boyd-photography-v1) of the site, which you can still check out [here](http://katieboydphotography.com/v1). A new fallback page is in development for better degradation with unsupported browsers.
 
