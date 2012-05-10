@@ -1,20 +1,22 @@
 <div id="topbar" class="sidebar">
-    <div class="wrapper">
-        <div id="me">
-            <div id="mast">
-                <img class="mug" src="/static/img/mug.jpg">
-                <h1><a href="/">Jico Baligod</a></h1>
-            </div>
-            
-            <div class="clear"></div>
-            
-            <p class="blurb">Code enthusiast, developer of things, tea drinker, and Linode support staffer.</p>
-        </div>
-        
-        {% include nav.html %}
-    </div>
-</div>
+  <div class="wrapper">
+    <div id="me">
+      <div id="mast">
+        <img class="mug" src="/static/img/mug.jpg">
+        <h1><a href="/">Jico Baligod</a></h1>
+      </div> <!-- /#mast -->
+
+      <div class="clear"></div>
+
+      <p class="blurb">
+        Developer, self-starter, and builder of things.
+      </p>
+    </div> <!-- /#me -->
+
+    {% include nav.html %}
+    
+  </div> <!-- /.wrapper -->
+</div> <!-- /#topbar -->
 
 {% include recent.html %}
-
 {% include social.html %}
