@@ -28,12 +28,19 @@ $link_color: hsl(196,83,30);
 /**
  *  Start core styling
  */
+* {
+  margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
 body {
   background-color: #fff;
+	border-top: 2px solid #333;
 	font-size: 1em;
 	padding: 16px 0 0;
-	border-top: 2px solid #333;
-	height: 100%;
 }
 
 a {
@@ -56,6 +63,11 @@ img {
     max-width: $container_width;
     margin: 0 auto;
     
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    	
     a:hover {
         color: white;
         background-color: $link_color;
@@ -310,31 +322,33 @@ ul#archives {
 }
 
 #footer {
-    font-size: 0.8em;
-    width: 100%;
-    background: #333 url('/static/img/xv.png');
-    padding: 1em 0;
+  font-size: 0.8em;
+  width: 100%;
+  height: 50px;
+  
+  .container {
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ddd;
-    
-    .container {
-        position: relative;
-    }
-    
-    p {
-        margin: 0;
-    }
+    position: relative;
+  }
+  
+  p {
+    margin: 0;
+  }
+}
+
+.push {
+  height: 50px;
 }
 
 .colophon {
-    width: $grid_width * 10;
+  width: $grid_width * 10;
 }
 
 .copyright {
     position: absolute;
     width: $grid_width * 6;
     top: 0;
-    right: $gutter;
+    right: 0;
     text-align: right;
 }
 
