@@ -1,18 +1,18 @@
 <div class="sidebar">
-    <div class="wrapper">
-        <div id="recent">
-            <a class="archives-link{% if page.title contains 'Archives' %} active {% endif %}" href="/archives">Archives &rarr;</a>
-            <h3>Recent</h3>
-            <div class="clear"></div>
-            <ul>
-                {% for post in site.posts limit:10 %}
-                    <li {% if forloop.first and page.url == '/index.html' %} class="latest" {% endif %}>
-                        <a href="{{ post.url }}" {% if page.url == post.url %} class="active" {% endif %}>{{ post.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+  <div class="wrapper">
+    <div id="recent">
+      <a class="archives-link{% if page.title contains 'Archives' %} active {% endif %}" href="/archives">Archives &rarr;</a>
+      <h3>Recent</h3>
+      <div class="clear"></div>
+      <ul>
+      {% for post in site.posts limit:10 %}
+        <li {% if forloop.first and page.url == '/index.html' %} class="latest" {% endif %}>
+            <a href="{{ post.url }}" {% if page.url == post.url %} class="active" {% endif %}>{{ post.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
     </div>
+  </div>
 </div>
 
 

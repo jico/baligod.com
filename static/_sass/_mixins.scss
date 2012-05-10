@@ -1,11 +1,11 @@
 @mixin border-radius($radius: 4px) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }
 
 @mixin transition($which: all, $duration: 0.5s, $easing: ease-in-out) {
-    -webkit-transition: $which $duration $easing;
-    -moz-transition: $which $duration $easing;
-    transition: $which $duration $easing;
+  -webkit-transition: $which $duration $easing;
+  -moz-transition: $which $duration $easing;
+  transition: $which $duration $easing;
 }
