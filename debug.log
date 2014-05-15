@@ -1,0 +1,116 @@
+date: 2014-05-14 20:57:56.749
+argv: node /opt/boxen/nodenv/versions/v0.8.23/bin/hexo server
+os: Darwin 13.1.0 darwin x64
+version:
+  hexo: 2.5.7
+  http_parser: 1.0
+  node: 0.8.23
+  v8: 3.11.10.25
+  ares: 1.7.5-DEV
+  uv: 0.8
+  zlib: 1.2.3
+  openssl: 1.0.0f
+---
+
+[debug] 20:57:56.527 Config file loaded
+[debug] 20:57:56.529 Version info checked successfully
+[debug] 20:57:56.564 Loading database.
+[debug] 20:57:56.595 Script load successfully: fancybox.js
+[debug] 20:57:56.641 Processed: Gruntfile.js
+[debug] 20:57:56.641 Processed: LICENSE
+[debug] 20:57:56.641 Processed: README.md
+[debug] 20:57:56.641 Processed: package.json
+[debug] 20:57:56.641 Processed: scripts/fancybox.js
+[debug] 20:57:56.658 Processed: source/css/_extend.styl
+[debug] 20:57:56.658 Processed: source/css/_variables.styl
+[debug] 20:57:56.658 Processed: source/css/_partial/archive.styl
+[debug] 20:57:56.658 Processed: source/css/_partial/article.styl
+[debug] 20:57:56.658 Processed: source/css/_partial/comment.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/footer.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/header.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/highlight.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/mobile.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/sidebar-aside.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/sidebar-bottom.styl
+[debug] 20:57:56.659 Processed: source/css/_partial/sidebar.styl
+[debug] 20:57:56.659 Processed: source/css/_util/grid.styl
+[debug] 20:57:56.659 Processed: source/css/_util/mixin.styl
+[debug] 20:57:56.674 Processed: source/js/script.js
+[debug] 20:57:56.675 Processed: source/css/style.styl
+[debug] 20:57:56.675 Processed: source/css/fonts/FontAwesome.otf
+[debug] 20:57:56.676 Processed: source/css/fonts/fontawesome-webfont.eot
+[debug] 20:57:56.677 Processed: source/css/fonts/fontawesome-webfont.svg
+[debug] 20:57:56.677 Processed: source/css/fonts/fontawesome-webfont.ttf
+[debug] 20:57:56.678 Processed: source/css/fonts/fontawesome-webfont.woff
+[debug] 20:57:56.679 Processed: source/css/images/banner.jpg
+[debug] 20:57:56.679 Processed: source/fancybox/blank.gif
+[debug] 20:57:56.680 Processed: source/fancybox/fancybox_loading.gif
+[debug] 20:57:56.680 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 20:57:56.682 Processed: source/fancybox/fancybox_overlay.png
+[debug] 20:57:56.683 Processed: source/fancybox/fancybox_sprite.png
+[debug] 20:57:56.683 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 20:57:56.684 Processed: source/fancybox/jquery.fancybox.css
+[debug] 20:57:56.685 Processed: source/fancybox/jquery.fancybox.js
+[debug] 20:57:56.686 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 20:57:56.686 Processed: source/fancybox/helpers/fancybox_buttons.png
+[debug] 20:57:56.687 Processed: source/fancybox/helpers/jquery.fancybox-buttons.css
+[debug] 20:57:56.690 Processed: source/fancybox/helpers/jquery.fancybox-buttons.js
+[debug] 20:57:56.701 Processed: source/fancybox/helpers/jquery.fancybox-media.js
+[debug] 20:57:56.701 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.css
+[debug] 20:57:56.702 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.js
+[debug] 20:57:56.702 Processed: layout/archive.ejs
+[debug] 20:57:56.702 Processed: layout/category.ejs
+[debug] 20:57:56.702 Processed: layout/index.ejs
+[debug] 20:57:56.703 Processed: layout/layout.ejs
+[debug] 20:57:56.703 Processed: layout/page.ejs
+[debug] 20:57:56.703 Processed: layout/post.ejs
+[debug] 20:57:56.703 Processed: layout/tag.ejs
+[debug] 20:57:56.703 Processed: layout/_widget/archive.ejs
+[debug] 20:57:56.703 Processed: layout/_widget/category.ejs
+[debug] 20:57:56.703 Processed: layout/_widget/recent_posts.ejs
+[debug] 20:57:56.703 Processed: layout/_widget/tag.ejs
+[debug] 20:57:56.703 Processed: layout/_widget/tagcloud.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/after-footer.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/archive-post.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/archive.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/article.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/footer.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/google-analytics.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/head.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/header.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/mobile-nav.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/sidebar.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/post/category.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/post/date.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/post/gallery.ejs
+[debug] 20:57:56.703 Processed: layout/_partial/post/nav.ejs
+[debug] 20:57:56.704 Processed: layout/_partial/post/tag.ejs
+[debug] 20:57:56.704 Processed: layout/_partial/post/title.ejs
+[debug] 20:57:56.717 Theme config loaded
+[debug] 20:57:56.717 Processed: _config.yml
+[error] 20:57:56.730 HexoError: Process failed: _posts/2012-03-27-git-info-in-rails.md
+Error: Unexpected tag "highlight ruby" on line 9 in file /Users/jicob/src/baligod/source/_posts/2012-03-27-git-info-in-rails.md.
+    at Object.exports.throwError (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/utils.js:183:9)
+    at parseTag (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/parser.js:543:13)
+    at exports.parse.name (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/parser.js:638:15)
+    at Object.exports.each (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/utils.js:45:11)
+    at Object.exports.parse (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/parser.js:622:9)
+    at exports.Swig.parse (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/swig.js:349:19)
+    at exports.Swig.precompile (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/swig.js:479:23)
+    at exports.Swig.compile (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.exports.Swig.render (/opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /opt/boxen/nodenv/versions/v0.8.23/lib/node_modules/hexo/lib/post/render.js:67:29
+
+[debug] 20:57:56.733 Processed: _posts/hello-world.md
+[debug] 20:57:56.748 Processed: _posts/2010-09-08-katie-boyd-photography.md
+[debug] 20:57:56.748 Processed: _posts/2010-10-27-fflocks.md
+[debug] 20:57:56.748 Processed: _posts/2011-05-04-ATCLP.md
+[debug] 20:57:56.748 Processed: _posts/2011-05-12-jacqueline-boyd-fine-art.md
+[debug] 20:57:56.748 Processed: _posts/2011-08-24-genie-salon.md
+[debug] 20:57:56.748 Processed: _posts/2011-09-26-marie-elaine-lanza.md
+[debug] 20:57:56.748 Processed: _posts/2012-02-20-brand-spankin-new.md
+[debug] 20:57:56.748 Processed: _posts/2012-02-22-yawn.md
+[debug] 20:57:56.748 Processed: _posts/2012-04-15-katie-boyd-photography.md
+[debug] 20:57:56.748 Processed: _posts/2012-05-10-avcado.md
+[debug] 20:57:56.749 Processed: _posts/2012-05-11-automata.md
+[debug] 20:57:56.749 Cache saved
