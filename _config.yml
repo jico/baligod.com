@@ -83,6 +83,9 @@ disqus_shortname: jicobaligod
 theme: casper
 exclude_generator:
 
+plugins:
+- hexo-deployer-rsyncc
+
 # Markdown
 ## https://github.com/chjj/marked
 markdown:
@@ -101,4 +104,5 @@ stylus:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsyncc
+  file: rsync.json
