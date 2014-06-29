@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Git Info in Rails | Jico Baligod</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="Jico Baligod">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <header class="post-header">
+      <a class="blog-logo" href="/">
+        
+        <span class="blog-title">Jico Baligod</span>
+        
+      </a>
+    </header>
+    <span class="post-meta">
+      <time datetime="2012-03-27T04:00:00.000Z" itemprop="datePublished">Mar 27 2012</time>
+      
+    </span>
+    <h1 class="post-title">Git Info in Rails</h1>
+    <article>
+      
+    </article>
+    <section class="post-content">
+      <h2 id="Initializer">Initializer</h2>
+<p>When developing a Rails application (or any app) with Git, it’s sometimes useful to see which branch or commit you’re currently on. You can initialize some global constants pretty easily in Rails by creating a file under your <code>config/initializers/</code> directory. I like to make a single file with all of my application-wide constants in <code>config/initializers/global_constants.rb</code>, but you can also split it up into specific files like <code>config/intializers/git_info.rb</code> for example.</p>
+<h2 id="Git_information">Git information</h2>
+<p>To get your current branch and commit information, just stick this in your initializer file:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="comment"># Get branch information</span>
+<span class="constant">GIT_BRANCH</span> = `git branch`.split.last
+<span class="constant">GIT_COMMIT</span> = `git log | sed -n <span class="number">1</span>p`
+</pre></td></tr></table></figure>
+
+
+
+<p>If you come across some color codes in the output, you can strip it out like so</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment"># Strip out color codes</span>
+<span class="constant">GIT_COMMIT</span> = `git log | sed -n <span class="number">1</span>p`.gsub(<span class="regexp">/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]/</span>,<span class="string">''</span>).split.first
+</pre></td></tr></table></figure>
+
+
+<h2 id="Tags_and_versions">Tags and versions</h2>
+<p>A great feature of Git is <a href="http://learn.github.com/p/tagging.html" title="Git Tagging" target="_blank">tagging</a>, which is typically used to tag version numbers, feature releases, and patches. An annotated tag is probably the simplest way to tag the current or any specified commit. For example:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment"># Simple annotated tagging</span>
+$ git tag <span class="operator">-a</span> v1.<span class="number">0.0</span> <span class="number">454</span>ef4d -m <span class="string">'Initial public release!'</span>
+</pre></td></tr></table></figure>
+
+
+<p>Note that you can drop the <code>454ef4d</code> commit specification, which would then just tag the current commit. You can also sign your tags with <a href="http://www.gnupg.org/" title="GPG" target="_blank">GPG</a> using the <code>-s</code> option instead of the <code>-a</code> option. If you’re on GitHub, you can push your tags using <code>git push --tags</code>.</p>
+<p>If you’ve been tagging along, a neat thing you can do is to display the latest version number or release in your application. Again, we can do this by creating a global constant</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="comment"># Get latest tag information</span>
+<span class="constant">APP_VERSION</span> = `git describe --tags`.strip
+</pre></td></tr></table></figure>
+
+
+
+<p>which will output something similar to <code>v1.0.0-1-g6a9ee26</code>. The format here is <code>[tag name]-[# commits ahead]-[current commit]</code>. This might be useful in a development environment, but you might want to strip it down to just the version number or tag name in your production app:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="comment"># Get only tag name</span>
+<span class="constant">APP_VERSION</span> = `git describe --tags \`git rev-list --tags --max-count=<span class="number">1</span>\`
+`.strip
+</pre></td></tr></table></figure>
+
+
+
+<p>Now you can print the <code>APP_VERSION</code> or any of the other constants out in one of your views, like your site’s footer, and make your app feel super official.</p>
+
+    </section>
+      <section id="comment">
+          <h1 class="title">Comments</h1>
+
+          
+          <div id="disqus_thread">
+              <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+          
+      </section>
+    <footer class="post-footer">
+      <section class="author">
+        <h4>Jico Baligod</h4>
+        <p>Jico is a young self-starter living in Brooklyn, NY. Since recently moving to the city, he's: become a huge food snob, adopted a decievingly large-looking tiny puppy, and is rapidly falling in love with front-end tech. He currently works as a developer at Crowdtap.</p>
+      </section>
+
+      <section class="share">
+        <h4>Share this post</h4>
+        <a class="icon-twitter" href="http://twitter.com/share?url=http://baligod.com/2012/03/27/git-info-in-rails/"
+          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <span class="hidden">Twitter</span>
+        </a>
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://baligod.com/2012/03/27/git-info-in-rails/"
+          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <span class="hidden">Facebook</span>
+        </a>
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http://baligod.com/2012/03/27/git-info-in-rails/"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <span class="hidden">Google+</span>
+        </a>
+      </section>
+    </footer>
+  </article>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">Jico Baligod</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'jicobaligod';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f5d4e6c613f5d1036000026');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+
+</body>
+</html>
