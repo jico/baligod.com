@@ -1,8 +1,11 @@
 {
   "name": "hexo-site",
-  "version": "2.5.7",
+  "version": "2.7.1",
   "private": true,
   "dependencies": {
-    "hexo-deployer-rsyncc": "0.0.1"
+    "hexo": "^2.7.1",
+    "hexo-deployer-rsyncc": "0.0.1",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-marked": "^0.1.0"
   }
 }
