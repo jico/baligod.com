@@ -1,0 +1,169 @@
+/**
+ * Variables
+ * ==============================
+ */
+
+$color-black: #444;
+
+$fontSize-small: 11px;
+$fontSize-base: 16px;
+$fontSize-large: 22px;
+$fontSize-larger: 32px;
+$fontSize-jumbo: 64px;
+
+
+
+/**
+ * Animations
+ * ==============================
+ */
+
+@keyframes springIn {
+  from, 60%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes springInZoom {
+  from, 60%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    transform: scale(0.9);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+
+
+
+/**
+ * Base
+ * ==============================
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, em, strong {
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: $color-black;
+}
+
+.Container {
+  margin: 0 auto;
+  max-width: 540px;
+  opacity: 0;
+  padding: 16px;
+}
+
+.wf-active .Container {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: springIn;
+  opacity: 1;
+}
+
+.no-js .Container {
+  opacity: 1;
+}
+
+
+/**
+ * Mast
+ * ==============================
+ */
+
+.Mast {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.Mast-mug {
+  border-radius: 75px;
+  height: 75px;
+  margin: 0 auto 8px;
+  width: 75px;
+}
+
+.Mast-heading {
+  font-size: $fontSize-larger;
+  font-weight: 100;
+  margin: 4px 0;
+}
+
+.Mast-subheading {
+  font-size: $fontSize-large;
+  font-weight: 100;
+  margin: 4px 0;
+}
+
+/**
+ * Main
+ * ==============================
+ */
+
+.Bio > p,
+.Social > p {
+  font-size: $fontSize-base;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.Bio {
+  margin-bottom: 32px;
+}
+
+.Social-heading {
+  font-weight: 100;
+  text-align: center;
+}
+
+.Social-list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.Social-link {
+  font-size: $fontSize-large;
+  color: $color-black;
+  padding: 12px;
+}
+
+.Social-link:hover {
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-name: springInZoom;
+  transform: scale(1.05);
+}
